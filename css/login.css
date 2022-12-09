@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  background-color: #f0f0f0;
+}
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff4d;
+  box-shadow: 5px 5px 15px rgba(149, 149, 149, 0.7);
+  border-radius: 10px;
+}
+
+.login h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #6a5be2;
+  text-align: center;
+}
+
+.campo-user input {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #1b1c30;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #6a5be2;
+  outline: none;
+  background: transparent;
+}
+
+.campo-user label {
+  position: relative;
+  left: 0;
+  top: -60px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #1b1c30;
+  pointer-events: none;
+  transition: 0.5s all ease;
+}
+
+.campo-user input:focus ~ label,
+.campo-user input:valid ~ label {
+  top: -85px;
+  left: 0;
+  color: #6a5be2;
+  font-size: 12px;
+}
+
+#submit {
+  padding: 10px 20px;
+  color: #f0f0f0;
+  background-color: #6a5be2;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+#submit:hover {
+  opacity: 0.8;
+}
+
+.bt-form {
+  display: flex;
+}
+
+#registro {
+  font-size: 16px;
+  text-decoration: none;
+  color: #1b1c30;
+  margin-left: 2%;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 60%;
+  text-align: center;
+}
+
+#registro a {
+  margin: auto;
+  color: #6a5be2;
+  text-decoration: none;
+}
+
+.custom-shape-divider-top-1670623821 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1670623821 svg {
+  position: relative;
+  display: block;
+  width: calc(127% + 1.3px);
+  height: 78px;
+}
+
+.custom-shape-divider-top-1670623821 .shape-fill {
+  fill: #6a5be2;
+}
+
+.custom-shape-divider-bottom-1670623707 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1670623707 svg {
+  position: relative;
+  display: block;
+  width: calc(174% + 1.3px);
+  height: 98px;
+}
+
+.custom-shape-divider-bottom-1670623707 .shape-fill {
+  fill: #6a5be2;
+}
+
+@media (max-width: 600px) {
+  .login {
+    width: 90%;
+  }
+}

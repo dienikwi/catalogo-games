@@ -7,11 +7,11 @@
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../assets/images/favicon.png"
+      href="./assets/images/favicon.png"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="text/css" href="../css/estilo.css" rel="stylesheet" />
-    <script type="text/javascript" src="../js/arquivo.js"></script>
+    <link type="text/css" href="./css/login.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/arquivo.js"></script>
     <title>Games</title>
   </head>
   <body>
@@ -30,7 +30,7 @@
     </div>
     <div class="login">
       <h2>Login</h2>
-      <form>
+      <form action="teste.php" method="get">
         <div class="campo-user">
           <input type="text" name="email" required="required" />
           <label>Email</label>
@@ -40,10 +40,10 @@
           <label>Senha</label>
         </div>
         <div class="bt-form">
-          <a class="submit" href="#">Entrar</a>
+          <button type="submit" id="submit" href="#">Entrar</button>
           <div id="registro">
             Não tem conta?
-            <a href="#">Cadastre-se</a>
+            <a href="./pages/cadastroUsuario.html">Cadastre-se</a>
           </div>
         </div>
       </form>
