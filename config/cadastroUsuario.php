@@ -21,3 +21,5 @@ require_once("./banco.php");
 
 // chamada da função
 db_inserir($nome, $email, $senha);
+
+?>

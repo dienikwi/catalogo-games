@@ -1,11 +1,14 @@
 <?php
 
+session_start();
+
 // $bd_host = "192.168.20.18"; //dentro do if
 $bd_host = "200.19.1.18"; //fora do if
 $sgbd = "pgsql";
 $base_de_dados = "dieniferkwiatkowski";
 $bd_usuario = "dieniferkwiatkowski";
 $bd_senha = "123456";
+global $conn;
 
 switch ($sgbd) {
     case "mysql":
@@ -42,3 +45,5 @@ switch ($sgbd) {
 
         break;
 }
+
+?>

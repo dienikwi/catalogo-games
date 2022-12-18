@@ -13,13 +13,6 @@ body {
   height: 100%;
 }
 
-body {
-  background-image: url("../assets/bg.svg");
-  background-size: 2000px 1000px;
-  background-position: -500px 0;
-  animation: gradient 10s infinite alternate linear;
-}
-
 .cadastro {
   position: absolute;
   top: 50%;
@@ -27,9 +20,10 @@ body {
   width: 50%;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background-color: #f0f0f0ef;
+  background-color: #f0f0f0;
   box-shadow: 5px 5px 15px rgba(149, 149, 149, 0.7);
   border-radius: 10px;
+  z-index: 999;
 }
 
 .cadastro h2 {
@@ -108,6 +102,47 @@ body {
   margin: auto;
   color: #6a5be2;
   text-decoration: none;
+}
+
+.custom-shape-divider-top-1670623821 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1670623821 svg {
+  position: relative;
+  display: block;
+  width: calc(127% + 1.3px);
+  height: 78px;
+}
+
+.custom-shape-divider-top-1670623821 .shape-fill {
+  fill: #6a5be2;
+}
+
+.custom-shape-divider-bottom-1670623707 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1670623707 svg {
+  position: relative;
+  display: block;
+  width: calc(174% + 1.3px);
+  height: 98px;
+}
+
+.custom-shape-divider-bottom-1670623707 .shape-fill {
+  fill: #6a5be2;
 }
 
 @keyframes gradient {
