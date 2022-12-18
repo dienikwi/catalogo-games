@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.6fr 1.3fr 1.1fr;
+  grid-template-rows: 0.4fr 1.3fr 1.3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "menu titulo-catalogo titulo-catalogo"
+    "menu jogos jogos"
+    "menu jogos jogos";
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.7fr 2.1fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "user user user"
+    "itens itens itens"
+    "logoff logoff logoff";
+  grid-area: menu;
+  padding: 1.5rem;
+  background-color: #6a5be2;
+  height: 100vh;
+}
+
+.user {
+  grid-area: user;
+}
+
+.user .nome-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: all ease 0.5s;
+}
+
+.user .nome-user label {
+  color: #f0f0f0;
+  margin-top: 2%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-bottom: 2px solid #f0f0f0;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.user .nome-user:hover {
+  color: #1b1c30;
+}
+
+.user .nome-user:hover label {
+  color: #1b1c30;
+  border-bottom: 2px solid #1b1c30;
+}
+
+.itens {
+  grid-area: itens;
+}
+
+.itens ul {
+  list-style-type: none;
+  margin-top: 10%;
+}
+
+.itens ul li {
+  margin-bottom: 10%;
+  padding: 1% 2%;
+  border-left: 2px solid #f0f0f0;
+  transition: all ease 1s;
+  cursor: pointer;
+}
+
+.itens ul li:hover {
+  background-color: #f0f0f0e7;
+  border-radius: 5px;
+}
+
+.itens ul li:hover a {
+  color: #1b1c30;
+}
+
+.itens ul li a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-size: 18px;
+  transition: all ease 1s;
+}
+
+.logoff {
+  grid-area: logoff;
+  text-align: center;
+}
+
+.logoff a {
+  text-decoration: none;
+  color: #f0f0f0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1.5px solid #f0f0f0;
+  transition: linear 0.5s;
+}
+
+.logoff a:hover {
+  color: #f0f0f0;
+  border: 1.5px solid #1b1c30;
+  background-color: #1b1c30;
+}
+
+.titulo-catalogo {
+  grid-area: titulo-catalogo;
+}
+
+.jogos {
+  grid-area: jogos;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    font-size: 10px;
+    padding: 0.5rem;
+  }
+
+  .itens ul li a {
+    font-size: 10px;
+  }
+
+  .itens ul li {
+    margin-bottom: 50%;
+  }
+}
