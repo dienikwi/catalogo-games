@@ -12,7 +12,7 @@ function db_inserir($nome, $email, $senha)
         $conn->query($sql);
         header("Location: ../index.html");
     } catch (Exception $e) {
-        header("Location: ../pages/cadastroUsuario.html");
+        header("Location: ../pages/mensagemErro.html");
     }
     return null;
 }

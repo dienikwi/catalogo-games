@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  background-color: #f0f0f0;
+  color: #1b1c30;
+}
+
+#card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff4d;
+  box-shadow: 5px 5px 15px rgba(149, 149, 149, 0.7);
+  border-radius: 10px;
+  text-align: center;
+}
+
+#card h1 {
+  margin-left: 1%;
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+.button {
+  text-decoration: none;
+  padding: 15px 40px;
+  margin-top: 5%;
+  background: #f44058;
+  border: 0;
+  border-radius: 20px;
+  color: #f0f0f0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  transition: all ease 0.5s;
+  display: block;
+}
+
+.button::after,
+.button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.button::after {
+  width: 30px;
+  height: 1px;
+  background: white;
+  transform: translateX(-3px);
+  margin-top: 0px;
+}
+
+.button::before {
+  content: "";
+  transform: rotate(-135deg) translateX(50%);
+  width: 11px;
+  height: 11px;
+  background: transparent;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  margin-top: -1px;
+}
+
+.button:hover {
+  padding: 15px 60px 15px 20px;
+}
+
+.button:hover::after,
+.button:hover::before {
+  opacity: 1;
+  right: 15px;
+}
+
+@media (max-width: 600px) {
+  #card {
+    width: 90%;
+  }
+}
