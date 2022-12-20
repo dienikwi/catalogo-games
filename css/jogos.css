@@ -132,8 +132,40 @@ body {
   grid-area: titulo-catalogo;
 }
 
+.titulo-hr {
+  display: flex;
+  align-items: center;
+}
+
+.titulo-catalogo h1 {
+  text-align: center;
+  margin-top: 1%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 25px;
+  padding: 0 0.5%;
+  cursor: pointer;
+}
+
+hr {
+  flex: 1;
+  border-top: 2px solid #6a5be2;
+  margin-top: 1%;
+}
+
 .jogos {
   grid-area: jogos;
+}
+
+#cards-jogos {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 2%;
+  background-color: red;
+}
+
+.card {
+  background-color: #cfcfd3;
 }
 
 @media (max-width: 600px) {
