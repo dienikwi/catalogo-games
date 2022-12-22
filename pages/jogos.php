@@ -31,34 +31,57 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
       <div class="progress"></div>
     </div>
     <div class="container">
-      <div class="menu">
-        <div class="user">
-          <a href="./jogos.php" class="nome-user">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-            </svg>
-            <label> <?php echo $nomeUser ?> </label>
-          </a>
-        </div>
-        <div class="itens">
-          <ul>
-            <li> <a href="#"> Minhas anotações </a> </li>
-            <li> <a href="#"> Catálogo </a> </li>
-            <li> <a href="#"> Sobre nós </a> </li>
-          </ul>
-        </div>
-        <div class="logoff">
-          <a href="../config/logoff.php">Sair</a>
-        </div>
-      </div>
-      <div class="titulo-catalogo">
-        <div class='titulo-hr'>
-          <hr>
-          <h1>Catálogo de games</h1>
-          <hr>
-        </div>
-      </div>
+      <nav class="menu">
+        <ul class="user">
+          <li>
+            <a href="./jogos.php">
+              <i class="fa fa-user fa-2x"></i>
+              <span class="texto-item">
+                <?php echo $nomeUser ?>
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <ul>
+          <li class="itens">
+            <a href="#">
+              <i class="fa fa-list fa-2x"></i>
+              <span class="texto-item">
+                Minhas anotações
+              </span>
+            </a>
+          </li>
+          <li class="itens">
+            <a href="#">
+              <i class="fa fa-folder-open fa-2x"></i>
+              <span class="texto-item">
+                Catálogo
+              </span>
+            </a>
+          </li>
+          <li>
+          <li class="itens">
+            <a href="#">
+              <i class="fa fa-info fa-2x"></i>
+              <span class="texto-item">
+                Sobre nós
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="logout">
+          <li>
+            <a href="../config/logoff.php">
+              <i class="fa fa-power-off fa-2x"></i>
+              <span class="texto-item">
+                Logout
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
       <div class="jogos">
         <div id="cards-jogos">
           <div class="card">card1</div>
@@ -68,12 +91,19 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
           <div class="card">card5</div>
           <div class="card">card6</div>
           <div class="card">card7</div>
+          <div class="card">card8</div>
+          <div class="card">card9</div>
+          <div class="card">card10</div>
+          <div class="card">card11</div>
+          <div class="card">card12</div>
+          <div class="card">card13</div>
+          <div class="card">card14</div>
         </div>
       </div>
     </div>
     <style>
       body {
-        overflow: hidden;
+        overflow-x: hidden;
       }
 
       .toast {
