@@ -33,6 +33,20 @@ class Usuario {
 
         return $array;
     }
+
+    public function info_jogos() {
+        global $conn;
+        $array = array();
+        $sql = "SELECT * FROM games.tb_jogo";
+        $sql = $conn->prepare($sql);
+        $sql->execute();
+
+        if ($sql->rowCount() > 0) {
+            $array = $sql->fetchAll();
+        }
+
+        return $array;
+    }
 }
 
 ?>

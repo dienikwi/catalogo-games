@@ -11,6 +11,7 @@ html,
 body {
   background-color: #f0f0f0;
   margin: 0;
+  color: #1b1c30;
 }
 
 .container {
@@ -77,11 +78,44 @@ ul.logout {
   background-color: #6a5be2;
 }
 
+.jogos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 80px;
+  margin-right: 150px;
+}
+
+#titulo-catalogo {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-left: 50px;
+}
+
+hr {
+  border-top: 1px solid #6a5be2;
+}
+
+#hr1 {
+  width: 3%;
+}
+
+#titulo-catalogo h1 {
+  width: 17%;
+  font-size: 20px;
+  text-align: center;
+}
+
+#hr2 {
+  width: 80%;
+}
+
 #cards-jogos {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-left: 80px;
+  margin-left: 150px;
 }
 
 .card {
@@ -108,11 +142,12 @@ figure {
 figure .img-jogo {
   transition: all ease 1s;
   width: 100%;
+  height: 100%;
 }
 
 .titulo {
   position: relative;
-  top: -30px;
+  top: -28px;
   padding: 2%;
   background: #1b1c30;
   color: #f0f0f0;
@@ -120,6 +155,7 @@ figure .img-jogo {
   opacity: 0;
   transition: all ease 1s;
   cursor: pointer;
+  font-size: 13px;
 }
 
 .card:hover .titulo {
@@ -133,5 +169,31 @@ figure .img-jogo {
 @media (max-width: 600px) {
   ul.user {
     margin-bottom: 180px;
+  }
+
+  .jogos {
+    margin-right: 0;
+  }
+
+  #hr1 {
+    width: 10%;
+  }
+
+  #titulo-catalogo h1 {
+    width: 55%;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+
+  #titulo-catalogo {
+    margin-left: 0;
+  }
+
+  #hr2 {
+    width: 35%;
+  }
+
+  #cards-jogos {
+    margin-left: 30px;
   }
 }

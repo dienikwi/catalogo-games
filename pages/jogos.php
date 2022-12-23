@@ -84,18 +84,40 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
       </nav>
 
       <div class="jogos">
-        <div id="cards-jogos">
-          <div class="card">
-            <a href="#">
-              <figure>
-                <img class="img-jogo" src="../assets/exemplo-capa.jpg">
-              </figure>
-            </a>
-            <div class="titulo">Horizon Forbidden West</div>
-          </div>
+
+        <div id="titulo-catalogo">
+          <hr id="hr1">
+          <h1>Todos os jogos</h1>
+          <hr id="hr2">
         </div>
+
+        <div id="cards-jogos">
+          <?php
+          $i = 0;
+          foreach ($jogo as $indice => $valor) {
+            echo "
+            <div class='card'>
+              <a href='#'>
+                <figure>
+                  <img class='img-jogo' src='../assets/jogos/";
+            echo $jogo[$indice]['img_principal'];
+            echo "
+                  '>
+                </figure>
+              </a>
+              <div class='titulo'>";
+            echo $jogo[$indice]['nm_jogo'];
+            echo "
+              </div>
+            </div>
+          ";
+          }
+          ?>
+
+        </div>
+
       </div>
-      
+
     </div>
     <style>
       body {
