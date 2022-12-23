@@ -82,24 +82,20 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
           </li>
         </ul>
       </nav>
+
       <div class="jogos">
         <div id="cards-jogos">
-          <div class="card">card1</div>
-          <div class="card">card2</div>
-          <div class="card">card3</div>
-          <div class="card">card4</div>
-          <div class="card">card5</div>
-          <div class="card">card6</div>
-          <div class="card">card7</div>
-          <div class="card">card8</div>
-          <div class="card">card9</div>
-          <div class="card">card10</div>
-          <div class="card">card11</div>
-          <div class="card">card12</div>
-          <div class="card">card13</div>
-          <div class="card">card14</div>
+          <div class="card">
+            <a href="#">
+              <figure>
+                <img class="img-jogo" src="../assets/exemplo-capa.jpg">
+              </figure>
+            </a>
+            <div class="titulo">Horizon Forbidden West</div>
+          </div>
         </div>
       </div>
+      
     </div>
     <style>
       body {
