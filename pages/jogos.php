@@ -45,7 +45,7 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
 
         <ul>
           <li class="itens">
-            <a href="#">
+            <a href="./anotacao.php">
               <i class="fa fa-list fa-2x"></i>
               <span class="texto-item">
                 Minhas anotações
@@ -53,7 +53,7 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
             </a>
           </li>
           <li class="itens">
-            <a href="#">
+            <a href="./jogos.php">
               <i class="fa fa-folder-open fa-2x"></i>
               <span class="texto-item">
                 Catálogo
@@ -62,7 +62,7 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
           </li>
           <li>
           <li class="itens">
-            <a href="#">
+            <a href="./info.php">
               <i class="fa fa-info fa-2x"></i>
               <span class="texto-item">
                 Sobre nós

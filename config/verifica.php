@@ -8,9 +8,6 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
     $nomeUser = $usuarioLogado['nm_usuario'];
 
     $jogo = $user->info_jogos();
-    
-    $img_principal = $jogo['img_principal'];
-
 } else {
     header("Location: ../pages/mensagemErro.html");
 }
