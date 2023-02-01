@@ -96,15 +96,13 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
           $i = 0;
           foreach ($jogo as $indice => $valor) {
             echo "
-            <div class='card'>
-              <a href='#'>
+            <div class='card' onclick='abrirJogo()'>
                 <figure>
                   <img class='img-jogo' src='../assets/jogos/";
             echo $jogo[$indice]['img_principal'];
             echo "
                   '>
                 </figure>
-              </a>
               <div class='titulo'>";
             echo $jogo[$indice]['nm_jogo'];
             echo "

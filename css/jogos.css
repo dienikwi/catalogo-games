@@ -125,10 +125,7 @@ hr {
   max-height: 280px;
   border-radius: 10px;
   margin: 1%;
-}
-
-.card a {
-  text-decoration: none;
+  cursor: pointer;
 }
 
 figure {
