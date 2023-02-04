@@ -33,18 +33,72 @@
 }
 
 #div-pesquisar i {
-    color: #6a5be2;
-    width: 3%;
+  color: #6a5be2;
+  width: 3%;
 }
 
 #pesquisar {
-    width: 96%;
-    border: none;
-    background-color: #f0f0f0;
-    font-size: 15px;
+  width: 96%;
+  border: none;
+  background-color: #f0f0f0;
+  font-size: 15px;
 }
 
 #pesquisar:focus-visible {
-    outline: none;
-    caret-color: #6a5be2;
+  outline: none;
+  caret-color: #6a5be2;
+}
+
+#cards-anotacoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.card-anotacao {
+  border: 1px solid #6a5be2;
+  width: 250px;
+  height: 350px;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.148) 0px 4px 12px;
+}
+
+.card-anotacao div {
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.titulo_card {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #6a5be2;
+}
+
+.avaliacao {
+  color: rgb(99, 99, 99);
+  font-size: 12px;
+}
+
+.aspas {
+  color: #6a5be2;
+}
+
+.figura-estrela {
+  background-color: transparent;
+  height: 25px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.figura-estrela img {
+  width: 25px;
 }

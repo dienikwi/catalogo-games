@@ -93,7 +93,6 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
 
         <div id="cards-jogos">
           <?php
-          $i = 0;
           foreach ($jogo as $indice => $valor) {
             echo "
             <div class='card' onclick='abrirJogo()'>

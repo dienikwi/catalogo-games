@@ -90,13 +90,52 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
                     <h1>Minhas anotações</h1>
                     <hr id="hr2">
                 </div>
-                <a href="#" class="bt-anotacao">
+                <a href="./cadastroAnotacao.html" class="bt-anotacao">
                     <i class="fa fa-pencil fa"></i>
                     <span>Cadastrar nova anotação</span>
                 </a>
                 <div id="div-pesquisar">
                     <i class="fa fa-search fa"></i>
                     <input type="text" name="pesquisa" placeholder="Pesquisar anotação..." id="pesquisar" />
+                </div>
+
+                <div id="cards-anotacoes">
+
+                    <?php
+                    foreach ($anotacao as $indice => $valor) {
+                        echo "
+                        <div class='card-anotacao'>
+                            <div class='titulo_card'>";
+                            echo $anotacao[$indice]['nm_jogo'];
+                        echo "
+                            </div>
+                            <div>
+                                <label class='avaliacao'>Avaliação (1 - 5):</label> <br>";
+                                echo " 
+                                <figure class='figura-estrela'>"; 
+                                for ($i=0; $i<$anotacao[$indice]['nu_estrelas']; $i++) {
+                                    echo " <img src='../assets/images/estrela.png'> ";
+                                }
+                                echo "
+                                </figure>
+                            </div>
+                            <div> <span class='aspas'> ❝ </span>";
+                            echo $anotacao[$indice]['ds_anotacao'];
+                            echo " <span class='aspas'> ❞ </span>
+                            </div>
+                        </div>";
+                    }
+                    ?>
+
+                    <!-- <div class="card-anotacao">
+                        <div class="titulo_card">titulo muito muito grande</div>
+                        <div>
+                            <label class="avaliacao">Avaliação:</label> <br>
+                            estrelas
+                        </div>
+                        <div>descricao</div>
+                    </div> -->
+
                 </div>
             </div>
         </div>
