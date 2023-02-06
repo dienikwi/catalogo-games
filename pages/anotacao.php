@@ -90,7 +90,7 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
                     <h1>Minhas anotações</h1>
                     <hr id="hr2">
                 </div>
-                <a href="./cadastroAnotacao.html" class="bt-anotacao">
+                <a href="./cadastroAnotacao.php" class="bt-anotacao">
                     <i class="fa fa-pencil fa"></i>
                     <span>Cadastrar nova anotação</span>
                 </a>

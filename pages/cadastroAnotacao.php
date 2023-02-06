@@ -1,23 +1,25 @@
-<!DOCTYPE html>
-<html lang="PT-BR">
+<?php
+
+require '../config/verifica.php';
+if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
+
+?>
+
+  <!DOCTYPE html>
+  <html lang="PT-BR">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../assets/images/favicon.png"
-    />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" href="../css/cadastro.css" rel="stylesheet" />
+    <link type="text/css" href="../css/anotacoes.css" rel="stylesheet" />
     <script type="text/javascript" src="../js/arquivo.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <title>Games</title>
   </head>
+
   <body>
     <div class="toast">
       <div class="toast-content">
@@ -30,55 +32,55 @@
       <div class="progress"></div>
     </div>
     <div class="custom-shape-divider-top-1670623821">
-      <svg
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-          class="shape-fill"
-        ></path>
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
       </svg>
     </div>
     <div class="cadastro">
-      <h2>Cadastre-se</h2>
-      <form action="../config/cadastroAnotacao.php" method="POST">
-        <div class="campo-user">
-          <input type="text" name="nome" required="required" />
-          <label>Nome</label>
+      <h2>Registrar anotação</h2>
+      <form action="../config/cadastrarAnotacao.php" method="POST">
+        <div class="label-select">
+          <label>Selecione um jogo</label>
+          <label>Número de estrelas</label>
         </div>
         <div class="campo-user">
-          <input type="text" name="email" required="required" />
-          <label>Email</label>
+          <select name="select-jogo">
+            <?php
+            foreach ($jogo as $indice => $valor) {
+            ?>
+              <option value="<?php echo $jogo[$indice]['id_jogo']; ?>">
+                <?php echo $jogo[$indice]['nm_jogo']; ?>
+              </option>
+            <?php } ?>
+          </select>
+          <select name="select-estrelas">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
         <div class="campo-user">
-          <input type="password" name="senha" required="required" />
-          <label>Senha</label>
+          <input type="text" name="descricao" required="required" />
+          <label>Anotação</label>
         </div>
         <div class="bt-form">
           <button type="submit" id="submit">Cadastrar</button>
+          <a href="./anotacao.php" id="voltar">Voltar</a>
         </div>
       </form>
     </div>
     <div class="custom-shape-divider-bottom-1670623707">
-      <svg
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-          class="shape-fill"
-        ></path>
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
       </svg>
     </div>
     <style>
       body {
         overflow-x: hidden;
       }
+
       .toast {
         z-index: 999;
         position: absolute;
@@ -162,9 +164,10 @@
         }
       }
 
-      .toast.active ~ button {
+      .toast.active~button {
         pointer-events: none;
       }
+
       @media (max-width: 600px) {
         .toast {
           display: none;
@@ -175,7 +178,7 @@
       const button = document.querySelector("button"),
         toast = document.querySelector(".toast");
       (closeIcon = document.querySelector(".close")),
-        (progress = document.querySelector(".progress"));
+      (progress = document.querySelector(".progress"));
 
       let timer1, timer2;
 
@@ -204,4 +207,11 @@
       });
     </script>
   </body>
-</html>
+
+  </html>
+
+<?php
+} else {
+  header("Location: ../pages/mensagemErro.html");
+}
+?>

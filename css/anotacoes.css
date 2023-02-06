@@ -102,3 +102,50 @@
 .figura-estrela img {
   width: 25px;
 }
+
+.label-select {
+  display: flex;
+  width: 100%;
+}
+
+.label-select label {
+  width: 45%;
+  padding: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-bottom: 0;
+}
+
+select {
+  outline: 0;
+  border: 0;
+  padding: 10px;
+  color: #f0f0f0;
+  background-color: #6a5be2;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 45%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  font-size: 15px;
+}
+
+#voltar {
+  color: #6a5be2;
+  border: 1px solid #6a5be2;
+  border-radius: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-left: 2%;
+  padding: 10px;
+  transition: all ease 0.5s;
+}
+
+#voltar:hover {
+  background-color: #6a5be2;
+  color: #f0f0f0;
+}
