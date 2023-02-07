@@ -51,7 +51,7 @@ class Usuario {
     public function info_anotacao($id) {
         global $conn;
         $array = array();
-        $sql = "select nm_jogo, nu_estrelas, ds_anotacao from games.tb_jogo A, games.tb_anotacao B where A.id_jogo = B.id_jogo AND id_usuario = :id";
+        $sql = "select nm_jogo, nu_estrelas, ds_anotacao, A.id_jogo from games.tb_jogo A, games.tb_anotacao B where A.id_jogo = B.id_jogo AND id_usuario = :id";
         $sql = $conn->prepare($sql);
         $sql->bindValue("id", $id);
         $sql->execute();

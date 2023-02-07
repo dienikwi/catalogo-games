@@ -123,6 +123,9 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
                             echo $anotacao[$indice]['ds_anotacao'];
                             echo " <span class='aspas'> ❞ </span>
                             </div>
+                            <a href='../config/deletar.php?idjogo={$anotacao[$indice]['id_jogo']}' 
+                                class='deletar'><i class='fa fa-trash fa-2x'></i>
+                            </a>
                         </div>";
                     }
                     ?>
