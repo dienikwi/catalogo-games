@@ -95,7 +95,8 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
           <?php
           foreach ($jogo as $indice => $valor) {
             echo "
-            <div class='card' onclick='abrirJogo()'>
+            <div class='card'>
+            <a href='./infoJogo.php?id_jogo={$jogo[$indice]['id_jogo']}&nm_jogo={$jogo[$indice]['nm_jogo']}&ds_jogo={$jogo[$indice]['ds_jogo']}&ds_genero={$jogo[$indice]['ds_genero']}&img_principal={$jogo[$indice]['img_principal']}'>
                 <figure>
                   <img class='img-jogo' src='../assets/jogos/";
             echo $jogo[$indice]['img_principal'];
@@ -106,6 +107,7 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
             echo $jogo[$indice]['nm_jogo'];
             echo "
               </div>
+            </a>
             </div>
           ";
           }
