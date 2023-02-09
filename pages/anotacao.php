@@ -123,22 +123,17 @@ if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) {
                             echo $anotacao[$indice]['ds_anotacao'];
                             echo " <span class='aspas'> ❞ </span>
                             </div>
+                            <div class='bt-manipula-dados'>
                             <a href='../config/deletar.php?idjogo={$anotacao[$indice]['id_jogo']}' 
                                 class='deletar'><i class='fa fa-trash fa-2x'></i>
                             </a>
+                            <a href='./editarAnotacao.php?idjogo={$anotacao[$indice]['id_jogo']}&nm_jogo={$anotacao[$indice]['nm_jogo']}' 
+                                class='editar'><i class='fa fa-edit fa-2x'></i>
+                            </a>
+                            </div>
                         </div>";
                     }
                     ?>
-
-                    <!-- <div class="card-anotacao">
-                        <div class="titulo_card">titulo muito muito grande</div>
-                        <div>
-                            <label class="avaliacao">Avaliação:</label> <br>
-                            estrelas
-                        </div>
-                        <div>descricao</div>
-                    </div> -->
-
                 </div>
             </div>
         </div>

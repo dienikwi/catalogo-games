@@ -150,14 +150,26 @@ select {
   color: #f0f0f0;
 }
 
-.deletar {
-  text-decoration: none;
+.bt-manipula-dados {
   text-align: right;
+}
+
+.deletar,
+.editar {
+  text-decoration: none;
   font-size: 12px;
-  color: #f44058;
   transition: all ease 0.5s;
 }
 
-.deletar:hover {
+.deletar {
+  color: #f44058;
+}
+
+.editar {
+  color: #1b1c30;
+}
+
+.deletar:hover,
+.editar:hover {
   opacity: 0.8;
 }
